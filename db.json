@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "John Doe",
+      "email": "john@example.com",
+      "password": "ganteng"
+    },
+    {
+      "username": "ilhamddy",
+      "email": "ilhammaulana9906@gmail.com",
+      "password": "asasasas",
+      "id": 2
+    },
+    {
+      "username": "tegarganteng",
+      "email": "tegar@gmail.com",
+      "password": "12345678",
+      "id": 3
+    },
+    {
+      "username": "ilhamddy",
+      "email": "ilhammaulana9906@gmail.com",
+      "password": "asaasasaas",
+      "id": 4
+    },
+    {
+      "username": "nabila",
+      "email": "nabila@gmail.com",
+      "password": "nabila123",
+      "id": 5
+    },
+    {
+      "username": "ayu safitri",
+      "email": "ayu@gmail.com",
+      "password": "ayusafitri",
+      "id": 6
+    },
+    {
+      "username": "shinta",
+      "email": "shinta@gmail.com",
+      "password": "shinta123",
+      "id": 7
+    },
+    {
+      "username": "halimah",
+      "email": "halimah@gmail.com",
+      "password": "halim123",
+      "id": 8
+    },
+    {
+      "username": "gerryano",
+      "email": "gerryano@gmail.com",
+      "password": "gerryano",
+      "id": 9
+    },
+    {
+      "username": "sherly",
+      "email": "sherly@gmail.com",
+      "password": "sherly123",
+      "id": 10
+    },
+    {
+      "username": "nuraya",
+      "email": "nurayaa@gmail.com",
+      "password": "aya1234",
+      "id": 11
+    }
+  ],
+  "tweets": [
+    {
+      "userId": 2,
+      "tweet": " selamat pagi dunia\n",
+      "id": 1
+    },
+    {
+      "userId": 10,
+      "tweet": "selamat pagi juga ilham ",
+      "id": 15
+    },
+    {
+      "userId": 6,
+      "tweet": "pagi ilhammm",
+      "id": 16
+    },
+    {
+      "userId": 5,
+      "tweet": "hi syg aksakslaasass",
+      "CreateAt": "17/12/2023",
+      "id": 17
+    }
+  ]
+}
