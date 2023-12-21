@@ -17,6 +17,7 @@ import { MdInsertEmoticon, MdOutlineKeyboardVoice } from "react-icons/md";
 import { useSelector } from "react-redux";
 import Posting from "../component/posting";
 import { baseUrl } from "../utils/config";
+import Rightbar from "../component/Rightbar";
 
 const ProfileDetail = () => {
   //selector post tweet
@@ -68,6 +69,7 @@ const ProfileDetail = () => {
       justifyContent="center"
       minW={{ base: "90%", md: "460px" }}
     >
+      {/* <Rightbar /> */}
       <Box fontFamily={"monospace"} my="5px">
         <Flex justify={"center"} mt={"15px"} fontSize={"xxx-large"}>
           {" "}
