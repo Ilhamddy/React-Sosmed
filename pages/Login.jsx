@@ -52,15 +52,18 @@ const Login = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-      const { usernameOrEmail, password } = values;
-      const isEmail = usernameOrEmail.includes("@");
-
-      const logUser = {
-        usernameOrEmail: usernameOrEmail,
-        password: password,
+      const loginUser = {
+        usernameOrEmail: values.usernameOrEmail,
+        password: values.password,
       };
+
       try {
-        let userData = await axios.post(`${baseUrl}/api/users/login?`, logUser);
+        let userData = await axios.post(
+          `${baseUrl}/api/users/login`,
+          loginUser
+        );
+
+        console.log(userData);
 
         //   try {
         //     let userData;
@@ -74,20 +77,24 @@ const Login = () => {
         //       );
         //     }
 
-        if (!userData.data.length) {
-          return toast({
-            title: "username or email, pass wrong.",
-            description: "please check username or pass your account .",
-            status: "warning",
-            duration: 9000,
-            isClosable: true,
-          });
-        }
+        // if (!userData.data.length) {
+        //   return toast({
+        //     title: "username or email, pass wrong.",
+        //     description: "please check username or pass your account .",
+        //     status: "warning",
+        //     duration: 9000,
+        //     isClosable: true,
+        //   });
+        // }
         // console.log(userData.data[0].id);
-        localStorage.setItem("setStorage", JSON.stringify(userData.data[0]));
-        // localStorage.setItem("setStorage", JSON.stringify({ usernameOrEmail, userid: userData.data[0].id }));
+        localStorage.setItem("setStorage", JSON.stringify(userData.data.data));
 
-        dispatch(loginAction(userData.data[0]));
+        // localStorage.setItem(
+        //   "setStorage",
+        //   JSON.stringify({ usernameOrEmail, userid: userData.data[0].id })
+        // );
+
+        dispatch(loginAction(userData.data.data));
         toast({
           title: "Login Success",
           description: "Successful login please post your tweet.",
@@ -100,11 +107,11 @@ const Login = () => {
       } catch (error) {
         console.error(error);
         toast({
-          title: "Cannot Login.",
-          status: "error",
-          duration: 5000,
+          title: "username or email, pass wrong.",
+          description: "please check username or pass your account .",
+          status: "warning",
+          duration: 9000,
           isClosable: true,
-          position: "top",
         });
       }
     },
